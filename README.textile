@@ -1,0 +1,23 @@
+h1. Current (ExpressionEngine 2 Extension)
+
+Current is small extension for ExpressionEngine 2 that grabs 
+
+h2. Installation
+
+Create a folder called "current" inside of your third_party directory and add the ext.current.php file. Activate the extension through the Addons -> Extensions menu.
+
+h2. Usage
+
+Current creates some global variables you can use to look cool.
+
+h3. {current_url}
+
+The current URL of the page. Ex: http://www.example.com/shoes.
+
+h3. {total_url_segments}
+
+The total number of URL segments. Ex: For http://www.example.com/bread/rye, it would be '2'.
+
+h3. {last_url_segment}
+
+Returns the last URL segment. Ex: For For http://www.example.com/sounds/windchimes, it would return 'windchimes'.
