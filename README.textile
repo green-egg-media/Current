@@ -1,6 +1,6 @@
 h1. Current (ExpressionEngine 2 Extension)
 
-Current is small extension for ExpressionEngine 2 that grabs 
+Current is small extension for ExpressionEngine 2 that grabs some useful information about the current page and adds them as global variables.
 
 h2. Installation
 
