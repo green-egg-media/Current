@@ -4,7 +4,7 @@ Current is small extension for ExpressionEngine 2 that grabs
 
 h2. Installation
 
-Create a folder called "current" inside of your third_party directory and add the ext.current.php file. Activate the extension through the Addons -> Extensions menu.
+Drop the 'current' folder inside of your third_party directory. Activate the extension through the Add-Ons -> Extensions menu.
 
 h2. Usage
 
