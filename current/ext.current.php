@@ -8,7 +8,7 @@
  * @package		current_ext
  * @category	Extension
  * @author		Adam Fairholm (Green Egg Media)
- * @link		http://ee.bybjorn.com/last_segment
+ * @link		https://github.com/green-egg-media/Current
  */
  
 class Current_ext {
