@@ -48,6 +48,10 @@ class Current_ext {
     	 * Total URL Segments
     	 */
 		$this->EE->config->_global_vars['total_url_segments'] = $this->EE->uri->total_segments();
+       /**
+    	 * URI String
+    	 */
+		$this->EE->config->_global_vars['uri_string'] = $this->EE->uri->uri_string();
 
      	/**
     	 * Last URL Segment
