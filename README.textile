@@ -28,4 +28,4 @@ The current URI string. Ex: For http://www.example.com/sounds/windchimes, it wou
 
 h3. {tracker_1}, {tracker_2}, {tracker_3}, {tracker_4}, {tracker_5}, {tracker_6}
 
-The uri_strings of the previously visited EE pages. For example, {tracker_1} would give you the previously visited page, and {tracker_2} would give you the page before that, etc.
+The uri_strings of the pages in EE's tracker array. For example, {tracker_1} is the uri_string of the current page, {tracker_2} would give you the previously visited page, {tracker_3} would give you the page before that, etc.
