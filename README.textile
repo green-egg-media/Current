@@ -11,16 +11,21 @@ h2. Usage
 Current creates some global variables you can use to look cool.
 
 h3. {current_url}
+
 The current URL of the page. Ex: http://www.example.com/shoes.
 
 h3. {total_url_segments}
+
 The total number of URL segments. Ex: For http://www.example.com/bread/rye, it would be '2'.
 
 h3. {last_url_segment}
+
 Returns the last URL segment. Ex: For http://www.example.com/sounds/windchimes, it would return 'windchimes'.
 
 h3. {uri_string}
+
 The current URI string. Ex: For http://www.example.com/sounds/windchimes, it would return 'sounds/windchimes'
 
 h3. {tracker_1}, {tracker_2}, {tracker_3}, {tracker_4}, {tracker_5}, {tracker_6}
+
 The uri_strings of the previously visited EE pages. For example, {tracker_1} would give you the previously visited page, and {tracker_2} would give you the page before that, etc.
