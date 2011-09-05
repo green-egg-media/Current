@@ -31,46 +31,35 @@ class Current_ext {
     }
 
 	// -------------------------------------------------------------------------- 
-    
-    /**
-     * Set some current data.
-     */
-    function set_current()
+
+	/**
+	 * Set some current data.
+	 *
+	 * @param $session_data
+	 * @return array The session data.
+	 */
+    function set_current( $session_data )
     {
-    	$this->EE->load->helper('url');
-    
-    	/**
-    	 * Current URL
-    	 */
+		$this->EE->load->helper('url');
+
+		//Current URL
 		$this->EE->config->_global_vars['current_url'] = current_url();
- 
-     	/**
-    	 * Total URL Segments
-    	 */
+
+		//Total URL Segments
 		$this->EE->config->_global_vars['total_url_segments'] = $this->EE->uri->total_segments();
-       /**
-    	 * URI String
-    	 */
+
+		//URI String
 		$this->EE->config->_global_vars['uri_string'] = $this->EE->uri->uri_string();
 
-     	/**
-    	 * Last URL Segment
-    	 */
-		$segments = $this->EE->uri->segment_array();
-		
-		$total = count($segments);
-		
-		if( $total == 0 ):
-		
-			$last = '';
-		
-		else:
-		
-			$last = $segments[$total];
-		
-		endif;
+		//Last URL Segment
+		$this->EE->config->_global_vars['last_url_segment'] = end( $this->EE->uri->segment_array() );
 
-		$this->EE->config->_global_vars['last_url_segment'] = $last;
+		//Tracker Segments 1 - 6. tracker_1 being the last EE page visited, tracker_2 the page before that, etc.
+		$tracker = $session_data->tracker;
+		for ( $i = 0; $i < 6; $i++ )
+		{
+			$this->EE->config->_global_vars['tracker_'.($i + 1)] = ( isset( $tracker[$i] ) ) ? $tracker[$i] : '';
+		}
     }
 
 	// --------------------------------------------------------------------------
@@ -85,7 +74,7 @@ class Current_ext {
 		$data = array(
 			'class'		=> __CLASS__,
 			'method'	=> 'set_current',
-			'hook'		=> 'sessions_start',
+			'hook'		=> 'sessions_end',
 			'settings'	=> '',
 			'priority'	=> 6,
 			'version'	=> $this->version,
