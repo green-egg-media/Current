@@ -4,7 +4,7 @@ Current is small extension for ExpressionEngine 2 that grabs some useful informa
 
 h2. Installation
 
-Drop the 'current' folder inside of your third_party directory. Activate the extension through the Add-Ons -> Extensions menu.
+Create a folder inside your third_party directory and name it 'current'. You can then either clone this repo into that directory, add this repo as a git submodule, or manually place the ext.current.php file in that directory. Activate the extension through the Add-Ons -> Extensions menu.
 
 h2. Usage
 
@@ -20,4 +20,12 @@ The total number of URL segments. Ex: For http://www.example.com/bread/rye, it w
 
 h3. {last_url_segment}
 
-Returns the last URL segment. Ex: For For http://www.example.com/sounds/windchimes, it would return 'windchimes'.
+Returns the last URL segment. Ex: For http://www.example.com/sounds/windchimes, it would return 'windchimes'.
+
+h3. {uri_string}
+
+The current URI string. Ex: For http://www.example.com/sounds/windchimes, it would return 'sounds/windchimes'
+
+h3. {tracker_1}, {tracker_2}, {tracker_3}, {tracker_4}, {tracker_5}, {tracker_6}
+
+The uri_strings of the pages in EE's tracker array. For example, {tracker_1} is the uri_string of the current page, {tracker_2} would give you the previously visited page, {tracker_3} would give you the page before that, etc.
