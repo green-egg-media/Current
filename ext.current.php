@@ -14,7 +14,7 @@
 class Current_ext {
     
     var $name 				= 'Current';
-    var $version 			= '1.0';
+    var $version 			= '1.1';
     var $description 		= 'Adds some variables about current page as global variables';
     var $settings_exist 	= 'n';
     var $docs_url 			= 'https://github.com/green-egg-media/Current';
@@ -82,6 +82,33 @@ class Current_ext {
 		);
 		
 		$this->EE->db->insert('extensions', $data);
+	}
+
+	// --------------------------------------------------------------------------
+	  
+	/**
+	 * Activate Extension
+	 *
+	 * @return void
+	 */
+	function update_extension($current = '')
+	{
+		if ($current == '' or $current == $this->version) return false;
+				
+		// If this is 1.1 and up, update the 
+		// extension hook used from sessions_start
+		// to sessions_end
+		if ($current <= '1.0')
+		{
+			$this->EE->db->where('class', __CLASS__);
+			$this->EE->db->update('extensions', 
+						array(
+							'hook' 		=> 'session_end',
+							'version' 	=> $this->version
+						)
+			);
+		}
+		
 	}
 
 	// --------------------------------------------------------------------------
