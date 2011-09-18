@@ -42,10 +42,10 @@ class Current_ext {
     {
 		$this->EE->load->helper('url');
 
-		//Current URL
+		// Current URL
 		$this->EE->config->_global_vars['current_url'] = current_url();
 
-		//Total URL Segments
+		// Total URL Segments
 		$this->EE->config->_global_vars['total_url_segments'] = $this->EE->uri->total_segments();
 
 		//URI String
@@ -54,7 +54,7 @@ class Current_ext {
 		//Last URL Segment
 		$this->EE->config->_global_vars['last_url_segment'] = end( $this->EE->uri->segment_array() );
 
-		//Tracker Segments 1 - 6. tracker_1 being the last EE page visited, tracker_2 the page before that, etc.
+		// Tracker Segments 1 - 6. tracker_1 being the last EE page visited, tracker_2 the page before that, etc.
 		$tracker = $session_data->tracker;
 		for ( $i = 0; $i < 6; $i++ )
 		{
@@ -87,7 +87,7 @@ class Current_ext {
 	// --------------------------------------------------------------------------
 	  
 	/**
-	 * Activate Extension
+	 * Update Extension
 	 *
 	 * @return void
 	 */
@@ -108,7 +108,6 @@ class Current_ext {
 						)
 			);
 		}
-		
 	}
 
 	// --------------------------------------------------------------------------
