@@ -13,13 +13,13 @@
  
 class Current_ext {
     
-    var $name 				= 'Current';
-    var $version 			= '1.1';
-    var $description 		= 'Adds some variables about current page as global variables';
-    var $settings_exist 	= 'n';
-    var $docs_url 			= 'https://github.com/green-egg-media/Current';
+    public $name 				= 'Current';
+    public $version 			= '1.1';
+    public $description 		= 'Adds some variables about the current page as global variables';
+    public $settings_exist 	= 'n';
+    public $docs_url 			= 'https://github.com/green-egg-media/Current';
  
-    var $settings 			= array();
+    public $settings 			= array();
  
 	// -------------------------------------------------------------------------- 
    
