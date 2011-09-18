@@ -48,10 +48,10 @@ class Current_ext {
 		// Total URL Segments
 		$this->EE->config->_global_vars['total_url_segments'] = $this->EE->uri->total_segments();
 
-		//URI String
+		// URI String
 		$this->EE->config->_global_vars['uri_string'] = $this->EE->uri->uri_string();
 
-		//Last URL Segment
+		// Last URL Segment
 		$this->EE->config->_global_vars['last_url_segment'] = end( $this->EE->uri->segment_array() );
 
 		// Tracker Segments 1 - 6. tracker_1 being the last EE page visited, tracker_2 the page before that, etc.
